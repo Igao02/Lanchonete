@@ -1,4 +1,5 @@
 using LanchoneteMVC.Context;
+using LanchoneteMVC.Models;
 using LanchoneteMVC.Repositories;
 using LanchoneteMVC.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILancheRepository, LancheRepository>();
 builder.Services.AddScoped<ICatgoriaRepository, CategoriaRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 

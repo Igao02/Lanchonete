@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\LanchoneteMVC.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\Full-Cart-icon.png",
+      "PackagePath": "staticwebassets\\Images\\Full-Cart-icon.png"
+    },
+    {
       "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\Imagem1.jpg",
       "PackagePath": "staticwebassets\\Images\\Imagem1.jpg"
     },
@@ -27,6 +31,14 @@
     {
       "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\carousel13.jpg",
       "PackagePath": "staticwebassets\\Images\\carousel13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\delete.png",
+      "PackagePath": "staticwebassets\\Images\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\remove.ico",
+      "PackagePath": "staticwebassets\\Images\\remove.ico"
     },
     {
       "Id": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\css\\site.css",

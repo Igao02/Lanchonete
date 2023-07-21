@@ -1,8 +1,7 @@
 ﻿using LanchoneteMVC.Context;
-using LanchoneteMVC.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LanchoneteMVC
+namespace LanchoneteMVC.Models
 {
     public class CarrinhoCompra
     {
@@ -42,7 +41,7 @@ namespace LanchoneteMVC
         {
             var carrinhoCompraItem = _context.CarrinhoCompraItens.SingleOrDefault(s => s.Lanche.LancheId == lanche.LancheId && s.CarrinhoCompraId == CarrinhoCompraId);
 
-            if(carrinhoCompraItem == null)
+            if (carrinhoCompraItem == null)
             {
                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
@@ -103,7 +102,7 @@ namespace LanchoneteMVC
         {
             var total = _context.CarrinhoCompraItens.Where(c => c.CarrinhoCompraId == CarrinhoCompraId).Select(c => c.Lanche.Preco * c.Quantidade).Sum();
             return total;
-          
+
         }
 
     }

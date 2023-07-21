@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9Dx/R9J9sgcVAbk2zNKieW+MdylSMF8PDYffBL6ERm8=",
+  "Hash": "mkpQ5S6GX2GLFTjmg/JNNW9ud+w/m7DzwAvcJ7KSezI=",
   "Source": "LanchoneteMVC",
   "BasePath": "_content/LanchoneteMVC",
   "Mode": "Default",
@@ -136,6 +136,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\carousel13.jpg"
     },
     {
+      "Identity": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\delete.png",
+      "SourceId": "LanchoneteMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\",
+      "BasePath": "_content/LanchoneteMVC",
+      "RelativePath": "Images/delete.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\delete.png"
+    },
+    {
+      "Identity": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\Full-Cart-icon.png",
+      "SourceId": "LanchoneteMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\",
+      "BasePath": "_content/LanchoneteMVC",
+      "RelativePath": "Images/Full-Cart-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Full-Cart-icon.png"
+    },
+    {
       "Identity": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\Imagem1.jpg",
       "SourceId": "LanchoneteMVC",
       "SourceType": "Discovered",
@@ -185,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Imagem3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\Images\\remove.ico",
+      "SourceId": "LanchoneteMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\",
+      "BasePath": "_content/LanchoneteMVC",
+      "RelativePath": "Images/remove.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\remove.ico"
     },
     {
       "Identity": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\wwwroot\\js\\site.js",
