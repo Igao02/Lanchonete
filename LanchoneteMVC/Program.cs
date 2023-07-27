@@ -12,7 +12,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILancheRepository, LancheRepository>();
-builder.Services.AddScoped<ICatgoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 builder.Services.AddMemoryCache();
@@ -49,8 +49,26 @@ app.UseSession();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+app.UseEndpoints(endpoints =>
+{
+    app.MapControllerRoute(
+         name: "categoriaFiltro",
+         pattern: "Lanche/{action}/{categoria?}",
+         defaults: new { Controller = "Lanche", Action = "List" }
+        );
+
+    app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
+
+/* //Aqui define qual tela será aberta primeiro na aplicação
+   app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+*/
 
 app.Run();

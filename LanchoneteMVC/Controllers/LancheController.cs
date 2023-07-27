@@ -42,7 +42,7 @@ namespace LanchoneteMVC.Controllers
                 CategoriaAtual = categoriaAtual
             };
 
-            return View(lancheListViewModel);
+            return View(lancheListViewModel); 
             
         }
     }

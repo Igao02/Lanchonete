@@ -2,7 +2,7 @@
 
 namespace LanchoneteMVC.Repositories.Interfaces
 {
-    public interface ICatgoriaRepository
+    public interface ICategoriaRepository
     {
         IEnumerable<Categoria> Categorias { get; }
     }
