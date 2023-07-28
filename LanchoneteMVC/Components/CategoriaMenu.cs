@@ -14,11 +14,9 @@ namespace LanchoneteMVC.Components
 
         public IViewComponentResult Invoke()
         {
-            var categorias = _categoriaRepository.Categorias.OrderBy(p => p.CategoriaNome);
+            var categorias = _categoriaRepository.Categorias.OrderBy(c => c.CategoriaNome);
             return View(categorias); 
         }
-
-
 
     }
 }

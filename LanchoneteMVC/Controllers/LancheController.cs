@@ -2,6 +2,7 @@
 using LanchoneteMVC.Repositories.Interfaces;
 using LanchoneteMVC.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace LanchoneteMVC.Controllers
 {
@@ -25,14 +26,16 @@ namespace LanchoneteMVC.Controllers
             }
             else
             {
-                if(string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
+               /* if(string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
                 {
                     lanches = _lancheRepository.Lanches.Where(l => l.Categoria.CategoriaNome.Equals("Normal")).OrderBy(l => l.Nome);
                 }
                 else
                 {
                     lanches = _lancheRepository.Lanches.Where(l => l.Categoria.CategoriaNome.Equals("Natural")).OrderBy(l => l.Nome);
-                }
+                */
+
+                lanches = _lancheRepository.Lanches.Where(l => l.Categoria.CategoriaNome.Equals(categoria)).OrderBy(c=>c.Nome);
                 categoriaAtual = categoria;
             }
 
@@ -42,8 +45,14 @@ namespace LanchoneteMVC.Controllers
                 CategoriaAtual = categoriaAtual
             };
 
-            return View(lancheListViewModel); 
-            
+            return View(lancheListViewModel);     
         }
+
+        public IActionResult Details(int lancheId)
+        {
+            var lanche = _lancheRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
+            return View(lanche);
+        }
+
     }
 }
