@@ -1,7 +1,7 @@
-using LanchoneteMVC.Context;
-using LanchoneteMVC.Models;
-using LanchoneteMVC.Repositories;
-using LanchoneteMVC.Repositories.Interfaces;
+using LanchoneteMVC.Domain.Models;
+using LanchoneteMVC.Domain.Repositories;
+using LanchoneteMVC.Persistence.Context;
+using LanchoneteMVC.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

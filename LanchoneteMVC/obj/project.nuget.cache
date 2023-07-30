@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/AmvzwxCj9sgkPmz7HP5geeY/EkkZ5O/D93RB+aKZ5ofBSywa/0VLqe0arVxdOks4GkcZjCcfG45nqjG9HrLDQ==",
+  "dgSpecHash": "tPraYhhjC8QLNFqBJKjFWP66leStjQ2ek2Kxa6iaRRsJaUE0u6xzS3/s5+mmehUUh6g+W/ZxXdY47pJ2PHsp0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC\\LanchoneteMVC.csproj",
   "expectedPackageFiles": [
@@ -218,9 +218,7 @@
     "C:\\Users\\gordi\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\gordi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\gordi\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\gordi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\gordi\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
-    "C:\\Users\\gordi\\.nuget\\packages\\xunit.extensibility.core\\2.5.0\\xunit.extensibility.core.2.5.0.nupkg.sha512"
+    "C:\\Users\\gordi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

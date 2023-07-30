@@ -3764,34 +3764,41 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "xunit.abstractions/2.0.3": {
-        "type": "package",
+      "LanchoneteMVC.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "lib/netstandard2.0/xunit.abstractions.dll": {
-            "related": ".xml"
-          }
+          "bin/placeholder/LanchoneteMVC.Application.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/xunit.abstractions.dll": {
-            "related": ".xml"
-          }
+          "bin/placeholder/LanchoneteMVC.Application.dll": {}
         }
       },
-      "xunit.extensibility.core/2.5.0": {
-        "type": "package",
+      "LanchoneteMVC.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "xunit.abstractions": "2.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "compile": {
-          "lib/netstandard1.1/xunit.core.dll": {
-            "related": ".xml"
-          }
+          "bin/placeholder/LanchoneteMVC.Domain.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/xunit.core.dll": {
-            "related": ".xml"
-          }
+          "bin/placeholder/LanchoneteMVC.Domain.dll": {}
+        }
+      },
+      "LanchoneteMVC.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LanchoneteMVC.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LanchoneteMVC.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LanchoneteMVC.Persistence.dll": {}
         }
       }
     }
@@ -10762,51 +10769,31 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "xunit.abstractions/2.0.3": {
-      "sha512": "pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
-      "type": "package",
-      "path": "xunit.abstractions/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35/xunit.abstractions.dll",
-        "lib/net35/xunit.abstractions.xml",
-        "lib/netstandard1.0/xunit.abstractions.dll",
-        "lib/netstandard1.0/xunit.abstractions.xml",
-        "lib/netstandard2.0/xunit.abstractions.dll",
-        "lib/netstandard2.0/xunit.abstractions.xml",
-        "xunit.abstractions.2.0.3.nupkg.sha512",
-        "xunit.abstractions.nuspec"
-      ]
+    "LanchoneteMVC.Application/1.0.0": {
+      "type": "project",
+      "path": "../LanchoneteMVC.Application/LanchoneteMVC.Application.csproj",
+      "msbuildProject": "../LanchoneteMVC.Application/LanchoneteMVC.Application.csproj"
     },
-    "xunit.extensibility.core/2.5.0": {
-      "sha512": "xRm6NIV3i7I+LkjsAJ91Xz2fxJm/oMEi2CYq1G5HlGTgcK1Zo2wNbLO6nKX1VG5FZzXibSdoLwr/MofVvh3mFA==",
-      "type": "package",
-      "path": "xunit.extensibility.core/2.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "_content/README.md",
-        "_content/logo-128-transparent.png",
-        "lib/net452/xunit.core.dll",
-        "lib/net452/xunit.core.dll.tdnet",
-        "lib/net452/xunit.core.xml",
-        "lib/net452/xunit.runner.tdnet.dll",
-        "lib/net452/xunit.runner.utility.net452.dll",
-        "lib/netstandard1.1/xunit.core.dll",
-        "lib/netstandard1.1/xunit.core.xml",
-        "xunit.extensibility.core.2.5.0.nupkg.sha512",
-        "xunit.extensibility.core.nuspec"
-      ]
+    "LanchoneteMVC.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LanchoneteMVC.Domain/LanchoneteMVC.Domain.csproj",
+      "msbuildProject": "../LanchoneteMVC.Domain/LanchoneteMVC.Domain.csproj"
+    },
+    "LanchoneteMVC.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../LanchoneteMVC.Persistence/LanchoneteMVC.Persistence.csproj",
+      "msbuildProject": "../LanchoneteMVC.Persistence/LanchoneteMVC.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "LanchoneteMVC.Application >= 1.0.0",
+      "LanchoneteMVC.Domain >= 1.0.0",
+      "LanchoneteMVC.Persistence >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
-      "xunit.extensibility.core >= 2.5.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15"
     ]
   },
   "packageFolders": {
@@ -10841,7 +10828,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Application\\LanchoneteMVC.Application.csproj": {
+              "projectPath": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Application\\LanchoneteMVC.Application.csproj"
+            },
+            "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Domain\\LanchoneteMVC.Domain.csproj": {
+              "projectPath": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Domain\\LanchoneteMVC.Domain.csproj"
+            },
+            "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Persistence\\LanchoneteMVC.Persistence.csproj": {
+              "projectPath": "C:\\Users\\gordi\\ProjetosCSharp\\ProjetoLanchonete\\LanchoneteMVC\\LanchoneteMVC.Persistence\\LanchoneteMVC.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -10873,10 +10870,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.15, )"
-          },
-          "xunit.extensibility.core": {
-            "target": "Package",
-            "version": "[2.5.0, )"
           }
         },
         "imports": [
