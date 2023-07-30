@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /.vs/LanchoneteMVC/v17/.suo
+/LanchoneteMVC/obj/Debug/net6.0/LanchoneteMVC.assets.cache
+/LanchoneteMVC/obj/Debug/net6.0/LanchoneteMVC.csproj.FileListAbsolute.txt
