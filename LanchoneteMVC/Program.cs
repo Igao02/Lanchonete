@@ -11,23 +11,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ILancheRepository, LancheRepository>();
-builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<ILancheRepository, LancheRepository>();
+builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
-
-
-
-//builder.Services.AddDbContext<AppDbContext>(options =>
-//{
-  //  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-    //builder.Services.AddTransient<ILancheRepository, LancheRepository>();
-    //builder.Services.AddTransient<ICatgoriaRepository, ICatgoriaRepository>();
-    
-//});
-
 
 
 var app = builder.Build();
