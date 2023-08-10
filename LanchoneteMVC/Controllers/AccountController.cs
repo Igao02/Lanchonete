@@ -24,5 +24,28 @@ namespace LanchoneteMVC.Controllers
                 ReturnUrl = returnUrl,
             });
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel loginVm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(loginVm);
+            }
+            var user = await _userManager.FindByNameAsync(loginVm.UserName);
+
+            if (user != null)
+            {
+                var result = await _signInManager.PasswordSignInAsync(user, loginVm.Password, false, false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                return Redirect(loginVm.ReturnUrl);
+            }
+            ModelState.AddModelError("", "Falha ao realizar o login!!");
+            return View(loginVm);
+        }
+
     }
 }
