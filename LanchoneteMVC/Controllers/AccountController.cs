@@ -47,5 +47,36 @@ namespace LanchoneteMVC.Controllers
             return View(loginVm);
         }
 
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(LoginViewModel registroVm)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser() { UserName = registroVm.UserName };
+                var result = await _userManager.CreateAsync(user, registroVm.Password);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+                    this.ModelState.AddModelError("Registro", "Falha ao realizar o registro");
+
+                }
+            }
+            return View(registroVm);
+        }
+
+
+
+
     }
 }
