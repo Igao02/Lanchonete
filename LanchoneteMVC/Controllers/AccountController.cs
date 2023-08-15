@@ -75,6 +75,15 @@ namespace LanchoneteMVC.Controllers
             return View(registroVm);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            //zerando os valores atribuidos ao usuário
+            HttpContext.Session.Clear();
+            HttpContext.User = null;
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
 
 
