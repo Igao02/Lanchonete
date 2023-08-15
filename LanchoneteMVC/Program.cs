@@ -46,13 +46,16 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-    app.MapControllerRoute(
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
+    endpoints.MapControllerRoute(
          name: "categoriaFiltro",
          pattern: "Lanche/{action}/{categoria?}",
-         defaults: new { Controller = "Lanche", Action = "List" }
-        );
+         defaults: new { Controller = "Lanche", Action = "List" });
 
-    app.MapControllerRoute(
+    endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
 });
