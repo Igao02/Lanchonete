@@ -64,6 +64,7 @@ namespace LanchoneteMVC.Controllers
 
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "Member");
                     return RedirectToAction("Login", "Account");
                 }
                 else
@@ -85,7 +86,10 @@ namespace LanchoneteMVC.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
 
     }
 }
