@@ -3,6 +3,7 @@ using LanchoneteMVC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 namespace LanchoneteMVC.Areas.Admin.Controllers
 {
@@ -17,10 +18,23 @@ namespace LanchoneteMVC.Areas.Admin.Controllers
             _context = context;
         }
 
-        // GET: Admin/AdminPedidos
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
-            return View(await _context.Pedidos.ToListAsync());
+            //AsQueryable Ele é usado para permitir que você trabalhe com consultas sem precisar necessariamente executá-las imediatamente. 
+
+            var resultado = _context.Pedidos.AsNoTracking().AsQueryable();
+
+            if (!string.IsNullOrEmpty(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+
+            return View(model);
+
         }
 
         // GET: Admin/AdminPedidos/Details/5

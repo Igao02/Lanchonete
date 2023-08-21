@@ -5,6 +5,7 @@ using LanchoneteMVC.Repositories.Interfaces;
 using LanchoneteMVC.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,11 @@ builder.Services.AddAuthorization(options =>
 });
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
+builder.Services.AddPaging(options =>
+{
+    options.ViewName = "Bootstrap4";
+    options.PageParameterName = "pageIndex";
+});
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 
