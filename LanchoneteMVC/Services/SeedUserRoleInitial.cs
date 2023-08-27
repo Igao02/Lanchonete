@@ -90,6 +90,25 @@ namespace LanchoneteMVC.Services
                     _userManager.AddToRoleAsync(user, "Admin").Wait();
                 }
             }
+
+            if (_userManager.FindByEmailAsync("admin").Result == null)
+            {
+                IdentityUser user = new IdentityUser();
+                user.UserName = "admin@localhost";
+                user.Email = "admin@localhost";
+                user.NormalizedEmail = "admin@LOCALHOST";
+                user.NormalizedUserName = "admin@LOCALHOST";
+                user.EmailConfirmed = true;
+                user.LockoutEnabled = false;
+                user.SecurityStamp = Guid.NewGuid().ToString();
+
+                IdentityResult result = _userManager.CreateAsync(user, "#Admin123").Result;
+
+                if (result.Succeeded)
+                {
+                    _userManager.AddToRoleAsync(user, "Admin").Wait();
+                }
+            }
         }
     }
 }

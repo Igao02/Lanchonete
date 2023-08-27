@@ -1,5 +1,6 @@
 ﻿using LanchoneteMVC.Context;
 using LanchoneteMVC.Models;
+using LanchoneteMVC.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -168,6 +169,26 @@ namespace LanchoneteMVC.Areas.Admin.Controllers
         private bool PedidoExists(int id)
         {
             return _context.Pedidos.Any(e => e.PedidoId == id);
+        }
+
+        public IActionResult PedidoLanches(int? id)
+        {
+            var pedido = _context.Pedidos.Include(pd => pd.PedidoItens).ThenInclude(l => l.Lanche)
+                         .FirstOrDefault(p => p.PedidoId == id);
+
+            if (pedido == null)
+            {
+                Response.StatusCode = 404;
+                return View("PedidoNotFound", id.Value);
+            }
+
+            PedidoLancheViewModel pedidoLanches = new PedidoLancheViewModel()
+            {
+                Pedido = pedido,
+                PedidoDetalhe = pedido.PedidoItens
+            };
+
+            return View(pedidoLanches);
         }
     }
 }
